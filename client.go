@@ -63,6 +63,7 @@ type Client struct {
 	Converts
 	Futures
 	SpotMargin
+	Wallet
 }
 
 func New(opts ...Option) *Client {
