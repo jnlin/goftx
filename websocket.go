@@ -15,7 +15,7 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/pkg/errors"
 
-	"github.com/grishinsana/goftx/models"
+	"github.com/jnlin/goftx/models"
 )
 
 const (
