@@ -82,6 +82,7 @@ func New(opts ...Option) *Client {
 	client.Converts = Converts{client: client}
 	client.Futures = Futures{client: client}
 	client.SpotMargin = SpotMargin{client: client}
+	client.Wallet = Wallet{client: client}
 	client.Stream = Stream{
 		apiKey:                 client.apiKey,
 		secret:                 client.secret,
