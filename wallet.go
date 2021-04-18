@@ -29,7 +29,7 @@ type Wallet struct {
 }
 
 func (w *Wallet) GetBalances() ([]*models.Balance, error) {
-	request, err := a.client.prepareRequest(Request{
+	request, err := w.client.prepareRequest(Request{
 		Auth:   true,
 		Method: http.MethodGet,
 		URL:    fmt.Sprintf("%s%s", apiUrl, apiGetBalances),
@@ -38,7 +38,7 @@ func (w *Wallet) GetBalances() ([]*models.Balance, error) {
 		return nil, errors.WithStack(err)
 	}
 
-	response, err := a.client.do(request)
+	response, err := w.client.do(request)
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}
